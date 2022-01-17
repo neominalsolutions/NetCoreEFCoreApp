@@ -1,0 +1,26 @@
+﻿- Bu katmanda Entityler bulunur. 
+- Uygulamanın en önemli katmanıdır. 
+- Entity dışında bu entitylerin logiclerin yazıldığı servisler. Repository interfaceleri, Domainde olucak olan Exceptionlar, Bu nesnelerde bir değişilik olduğunda fırlatılacak olan eventler gibi nesnelerin tutulduğu katmandır. 
+- Bu katman Core katmanı dışında başka bir katmandan referans almaz. 
+- Uygulamadaki bütün katmanlar bu katmanı referans alır.
+
+
+Örnek Katman Klasörlemesi aşağıdaki gibidir
+
+ + Models (Entities)
+    Product.cs
+ + Events
+   ProductPriceChanged.cs
+ + Services
+   ProductStockCheckService.cs
++  Types
+   OrderState.cs => Enum  (Rejected, Completed, Ordered, Shipped)
++  Exceptions
+   StockLimitedException.cs
++  Repositories (Implementation)
+   IProductRepository.cs (Interface)
+
+
+
+
+   

@@ -1,0 +1,8 @@
+﻿Bu layer Veritabanı ile bağımsız bir şekilde bağlantı kurmak için bir kaç dosyayı içersinde barındırır. Ama farklı teknoloji implementasyonlarını bu katman altında toplamaktır. EFCore, Nhibernate, Dapper, AdoNet en çok tercih edilen veri erişim teknolojileridir. Data Access Technologies
+
+
+// Application => Persistence layer ile haberleşerek veri kaynağından veri çekme veri kaynağına veri gönderme gibi operasyonları yapacak.
+
+// Application içerisinde SqlConnection açıp yada EntityFramework'e bağlanıp direk olarak db.Products çekmek yerine bu ara katmanı kullanarak iki nesnenin birbirine olan bağımlılığını persistence katmanı sayesinde koparırız. Böyle DIP (Dependency Inverision Principle) uygulamış oluruz.
+
+Not: Bazı kaynaklarda bu katmanı Infrastructure katmanı altında bir katman olarak görürüz. Aslında bir teknoloji implementasyonu olması sebebi ile altyapısal bir veri erişim katmanı görevi görür. Fakat bu katmanın diğer katmanlar gibi ayrıldığını da bazı kaynaklarda görürsünüz.
